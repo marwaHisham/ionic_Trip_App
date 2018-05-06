@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Add Person</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+  <ion-content>
+    <form (submit)="addPerson()" [formGroup]="form">
+        <ion-list>
+  
+        <ion-item>
+          <ion-input formControlName="name" type="text" placeholder="name"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-input formControlName="password" type="password" placeholder="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input formControlName="email" type="text" placeholder="Email"></ion-input>
+        </ion-item>
+  
+  
+      </ion-list>
+      <div padding>
+        <button ion-button block type="submit">Save</button>
+      </div>
+    </form>
+
+  
+</ion-content>
